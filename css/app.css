@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+#app {
+    margin: 0;
+    padding: 0;
+    /*    height: 100%;*/
+    /*    width: 100%;*/
+    background: ghostwhite;
+}
+
+.red {
+    color: darkred !important;
+}
+
+#app {
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-container {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 5px 4px 2px #84848469;
+    padding: 30px 40px;
+    z-index: 1000;
+    position: relative;
+}
+
+.data-container {
+    width: 80%;
+    background:white;
+    box-shadow: 0px 5px 4px #84848469;
+    padding: 30px 40px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+#no-user,
+#no-repo {
+    opacity: 0;
+}
+
+.active {
+    opacity: 1 !important;
+}

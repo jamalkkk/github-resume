@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GitHub Resume</title>
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"> <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="container">
+            <div class="search-container">
+                <p>GitHub username</p>
+                <input id="userInput" type="text" placeholder="Type user name">
+                <button id="generateBtn">Generate</button>
+                <p id="no-user">User not found!</p>
+            </div>
+            <div class="data-container">
+                <div class="profile">
+                    <h1 class="username">Username</h1>
+                    <p class="userBio">BIO</p>
+                    <a class="userUrl red" target="_blank">URL</a>
+                    <p class="userDesc">
+                        On Github since <span class="year">YEAR</span>, <span class="username">USER</span> is a developer based in <span class="city">CITY</span><span class="country">COUNTRY</span> with <span class="red"><span class="repoCount">XXX</span> public repositories</span> and <span class="red"><span class="fllwrCount">XX</span> followers.</span>
+                    </p>
+                </div>
+                <div class="languages">
+                    <h2>Languages</h2>
+                </div>
+                <div class="repos">
+                    <h2>Popular Repositories</h2>
+                    <p id="no-repo">No repositories available</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- load JS files -->
+    <script src="js/jquery-1.11.3.min.js"></script> <!-- jQuery (https://jquery.com/download/) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/app.js"></script> <!-- https://github.com/flesler/jquery.scrollTo -->
+
+</body>
+
+</html>
