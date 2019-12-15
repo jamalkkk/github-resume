@@ -8,7 +8,7 @@
 
     <title>GitHub Resume</title>
     <!-- load stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"> <!-- Google web font "Open Sans" -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="css/app.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,27 +23,33 @@
 
     <div id="app">
         <div class="container">
+            <h1 class="heading">My GitHub Resumé</h1>
             <div class="search-container">
-                <p>GitHub username</p>
-                <input id="userInput" type="text" placeholder="Type user name">
-                <button id="generateBtn">Generate</button>
-                <p id="no-user">User not found!</p>
+                <form method="POST">
+                    <label class="username-label" for="userInput">GitHub username</label>
+                    <input id="userInput" type="text" name="username" placeholder="Type username">
+                    <input type="submit" id="generateBtn" value="Generate" alt="Submit"/>
+                </form>
             </div>
             <div class="data-container">
-                <div class="profile">
-                    <h1 class="username">Username</h1>
-                    <p class="userBio">BIO</p>
-                    <a class="userUrl red" target="_blank">URL</a>
-                    <p class="userDesc">
-                        On Github since <span class="year">YEAR</span>, <span class="username">USER</span> is a developer based in <span class="city">CITY</span><span class="country">COUNTRY</span> with <span class="red"><span class="repoCount">XXX</span> public repositories</span> and <span class="red"><span class="fllwrCount">XX</span> followers.</span>
-                    </p>
-                </div>
-                <div class="languages">
-                    <h2>Languages</h2>
-                </div>
-                <div class="repos">
-                    <h2>Popular Repositories</h2>
-                    <p id="no-repo">No repositories available</p>
+                <p class="no-user">User not found!</p>
+                <div class="user-data">
+                    <div class="profile">
+                        <h1 class="username"></h1>
+                        <p class="userBio"></p>
+                        <a class="userUrl red" target="_blank"></a>
+                        <p class="userDesc">
+                            On Github since <span class="year"></span>, <span class="username"></span> is a developer based in <span class="city"></span><span class="country"></span> with <span class="red"><span class="repoCount red"></span> public repositories</span> and <span class="red"><span class="fllwrCount red"></span> followers</span>.
+                        </p>
+                    </div>
+                    <div class="languages">
+                        <h3>Languages</h3>
+                        <p class="no-repo">No languages available!</p>
+                    </div>
+                    <div class="repos">
+                        <h3>Popular Repositories</h3>
+                        <p class="no-repo">No repositories available!</p>
+                    </div>
                 </div>
             </div>
 

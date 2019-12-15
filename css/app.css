@@ -1,53 +1,242 @@
+:root {
+    --white: #F7F8FB;
+    --red: #EC174D;
+    --grey: #888;
+    --black: #424242;
+}
+
 * {
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--black);
 }
+
+.red {
+    color: var(--red) !important;
+}
+
+
+.no-user,
+.no-repo {
+    display: none;
+}
+
+.active {
+    display: block !important;
+}
+
 
 body,
 #app {
     margin: 0;
     padding: 0;
-    /*    height: 100%;*/
-    /*    width: 100%;*/
-    background: ghostwhite;
+    background: var(--white);
 }
 
-.red {
-    color: darkred !important;
-}
 
 #app {
-    padding: 20px;
+    padding: 40px;
 }
 
 .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
+
+.container > .heading {
+    text-align: center;
+    margin: 0 auto 30px;
+}
+
+
+/* Search container */
 
 .search-container {
     width: 100%;
     background: white;
     box-shadow: 0px 5px 4px 2px #84848469;
-    padding: 30px 40px;
+    padding: 20px 60px 45px;
     z-index: 1000;
     position: relative;
 }
 
+.username-label {
+	font-size: 18px;
+	font-weight: 600;
+	display: block;
+	margin: 20px 0;
+}
+
+#userInput {
+    width: 70%;
+    border: 0;
+    border-bottom: 2px solid #eee;
+    padding: 7px 0;
+    font-size: 14px;
+    color: #a8a8a8;
+}
+
+#generateBtn {
+    height: 30px;
+    width: calc(30% - 10px);
+    margin: 0 0 0 10px;
+    position: relative;
+    float: right;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 0;
+    cursor: pointer;
+    background: var(--red);
+    color: var(--white);
+    box-shadow: 0px 2px 3px #c8c1c1;
+    transition: all 0.5s ease;
+}
+
+#generateBtn:hover {
+    background: #fb5180;
+    box-shadow: 0 1px 1px #c8c1c1;
+}
+
+
+#generateBtn:active,
+#generateBtn.disabled {
+    background: #9F2F4C;
+    box-shadow: 0 0 0 #c8c1c1;
+}
+
+#generateBtn.disabled {
+    cursor: not-allowed;
+    cursor: wait;
+}
+
+/* Data container */
+
 .data-container {
-    width: 80%;
-    background:white;
+    width: 85%;
+    background: white;
     box-shadow: 0px 5px 4px #84848469;
     padding: 30px 40px;
     margin: 0 auto;
     z-index: 10;
+    transition: all 0.5s ease;
 }
 
-#no-user,
-#no-repo {
-    opacity: 0;
+/* User data */
+
+.user-data {
+    display: none;
 }
 
-.active {
-    opacity: 1 !important;
+.username {
+    margin: 10px 0 5px;
+}
+
+.userBio {
+    margin: 0 0 20px;
+    color: #939393;
+    font-size: 20px;
+}
+
+.userDesc {
+    margin: 40px 0 50px;
+}
+
+/* Languages */
+
+.languages {
+    margin-bottom: 50px;
+}
+
+.language {
+    position: relative;
+    display: inline-block;
+    width: 24%;
+    padding: 5px 1% 10px 0;
+    text-align: center;
+}
+
+.percNum {
+    color: var(--grey);
+    padding: 0 0 0 5%;
+}
+
+.wrapperline {
+    height: 5px;
+    width: 95%;
+    background: var(--white);
+    margin: 8px 0;
+    border-radius: 4px;
+}
+
+.percLine {
+    display: block;
+    height: 100%;
+    background: #B7B7B7;
+    border-radius: 5px;
+}
+
+/* Repositories */
+
+.repo {
+    margin-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.repo .heading {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.repo .date,
+.repo .date *,
+.repo .langRights,
+.repo .langRights * {
+    color: var(--grey);
+}
+
+.desc {
+    margin-top: 15px;
+}
+
+/* For small devices */
+
+
+@media only screen and (max-width: 750px) {
+    .language {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #app {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .container > .heading {
+        margin: 0 auto 20px;
+    }
+    
+    .username-label {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    #userInput {
+        width: 100%;
+        margin: 0 0 15px;
+    }
+
+    #generateBtn {
+        margin: 0 auto;
+        width: 50%;
+    }
+
 }
