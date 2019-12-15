@@ -6,7 +6,7 @@ $(function () {
 
         var keycode = (e.keycode ? e.keycode : e.which);
 
-        if (keycode == '13') $('#generateBtn').trigger('click');
+        if (keycode == '13') submitForm(e);
         if (keycode == '16') $('#generateBtn').focus();
 
     });
@@ -15,7 +15,12 @@ $(function () {
     /* Handles form submission */
     
     $('form').submit(function (event) {
+        
+        submitForm(event);
+        
+    });
 
+    function submitForm(event) {
         event.preventDefault();  
 
         var repositories;
@@ -63,6 +68,7 @@ $(function () {
 
                         repositories = json.items;
                         getRepositories();
+                        
 
                     }).fail(function () {
 
@@ -80,7 +86,7 @@ $(function () {
                         $.each(repositories, function (index) {
                             createRepository(repositories[index])
                         });
-
+                        
                         getLanguages();
                     }
 
@@ -136,7 +142,7 @@ $(function () {
                     */
                     
                     function getLanguages() {
-
+                                                
                         var langCount = allLanguages.length;
                         var uniqueLanguages = getUniqueLang(allLanguages);
 
@@ -202,7 +208,7 @@ $(function () {
                 }
             });
         }, 500);
-    });
+    }
     
     
     /*
