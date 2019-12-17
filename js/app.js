@@ -60,7 +60,7 @@ $(function () {
                     $('.city').text(json.location.split(', ')[0]);
                     if (json.location.split(', ')[1] == undefined) 
                         $('.country').text(' ');
-                    else $('.country').text(json.location.split(', ')[1]);
+                    else $('.country').text(', ' + json.location.split(', ')[1]);
 
                     /* Get all repositories */
 
